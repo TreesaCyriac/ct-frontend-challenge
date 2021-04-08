@@ -1,0 +1,28 @@
+<div class="container">
+  <div style="text-align: center">
+    <img alt="Comtravo Logo" height="35" src="/assets/logo.svg" width="209" />
+  </div>
+
+  <div class="content">
+    <div class="nav">
+      <a class="link" [routerLink]="['/']">List</a>
+      <a class="link" [routerLink]="['/invite']">Invite</a>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="msgs-container">
+    <div
+      *ngFor="let msg of messages; let i = index; trackBy: trackByIndex"
+      class="msg-block"
+    >
+      <div class="err-msg" *ngIf="msg.type === 'error'">
+        {{ msg.error }}
+      </div>
+      <div class="success-msg" *ngIf="msg.type === 'success' && msg.count">
+        {{ msg.count }} users successfully invited!
+      </div>
+      <span class="close" (click)="onClose(i)">X</span>
+    </div>
+  </div>
+</div>

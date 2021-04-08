@@ -1,0 +1,37 @@
+.container {
+    position: relative;
+}
+
+.msgs-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.msg-block {
+    position: relative;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.err-msg {
+    background: red;
+    padding: 10px 27px 10px 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.success-msg {
+    background: green;
+    padding: 10px 27px 10px 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.close {
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
